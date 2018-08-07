@@ -1,0 +1,25 @@
+package java_practise;
+
+import java.util.Scanner;
+
+public class Chinna {
+
+	public static void main(String args[]) {
+		int count=0;
+		
+		Scanner sc =new Scanner(System.in);
+		System.out.println("enter a new word");
+		String s=sc.next();
+		int count1=0;
+		
+		int a=s.length();
+		
+		for(int i=0;i<a-1;i++) {
+			if (s.charAt(i)==s.charAt(i+1)) {
+				count1++;
+				System.out.println(s.charAt(i));
+			}
+		}
+		
+	}
+}
