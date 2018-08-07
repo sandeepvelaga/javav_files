@@ -1,0 +1,32 @@
+package java_files;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class copy_file {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		PrintWriter pw = new PrintWriter("def.txt");
+		
+		BufferedReader br= new BufferedReader(new FileReader("abc.txt"));
+		
+		String line=br.readLine();
+		
+		while(line!=null) {
+			pw.println(line);
+			line=br.readLine();
+		}
+		
+		System.out.println("file copied");
+		pw.flush();
+		
+		br.close();
+		pw.close();
+
+	}
+
+}
